@@ -1,0 +1,342 @@
+openapi: 3.0.4
+info:
+  title: Tenancy Service
+  version: v1
+paths:
+  /api/tenants:
+    post:
+      tags:
+        - Tenants
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.CreateTenantRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.CreateTenantRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.CreateTenantRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiResponse'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiResponse'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiResponse'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+        default:
+          description: Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+  '/api/tenants/{id}/status':
+    put:
+      tags:
+        - Tenants
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantStatusRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantStatusRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantStatusRequest'
+      responses:
+        '204':
+          description: No Content
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+        default:
+          description: Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+  '/api/tenants/{id}':
+    put:
+      tags:
+        - Tenants
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: int32
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantRequest'
+      responses:
+        '204':
+          description: No Content
+        '404':
+          description: Not Found
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+        '400':
+          description: Bad Request
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+        default:
+          description: Error
+          content:
+            text/plain:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails'
+components:
+  schemas:
+    Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.CreateTenantRequest:
+      type: object
+      properties:
+        legalName:
+          type: string
+          nullable: true
+        tradeName:
+          type: string
+          nullable: true
+        taxId:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        pciCompliant:
+          type: boolean
+        requiresIframe:
+          type: boolean
+        antifraudEnabled:
+          type: boolean
+        tokenizationRequired:
+          type: boolean
+        address:
+          $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.TenantAddressDto'
+      additionalProperties: false
+    Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantRequest:
+      type: object
+      properties:
+        legalName:
+          type: string
+          nullable: true
+        tradeName:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        phoneNumber:
+          type: string
+          nullable: true
+        pciCompliant:
+          type: boolean
+          nullable: true
+        requiresIframe:
+          type: boolean
+          nullable: true
+        antifraudEnabled:
+          type: boolean
+          nullable: true
+        tokenizationRequired:
+          type: boolean
+          nullable: true
+        address:
+          $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.TenantAddressDto'
+      additionalProperties: false
+    Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.Requests.UpdateTenantStatusRequest:
+      type: object
+      properties:
+        status:
+          $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Domain.Enums.TenantStatus'
+      additionalProperties: false
+    Axis.AxisPayment.Backoffice.Tenancy.Application.DataTransferObjects.TenantAddressDto:
+      type: object
+      properties:
+        street:
+          type: string
+          nullable: true
+        number:
+          type: string
+          nullable: true
+        complement:
+          type: string
+          nullable: true
+        neighborhood:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        state:
+          type: string
+          nullable: true
+        zipCode:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Axis.AxisPayment.Backoffice.Tenancy.Domain.Enums.TenantStatus:
+      enum:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+      type: integer
+      format: int32
+    Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiError:
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        propertyName:
+          type: string
+          nullable: true
+      additionalProperties: false
+    Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+          nullable: true
+        statusCode:
+          type: integer
+          format: int32
+          nullable: true
+          readOnly: true
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/Axis.AxisPayment.Backoffice.Tenancy.Domain.Handler.ApiError'
+          nullable: true
+        data:
+          nullable: true
+      additionalProperties: false
+    Microsoft.AspNetCore.Mvc.ProblemDetails:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+          nullable: true
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+      additionalProperties: { }
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: 'Cabeçalho de autorização JWT usando o esquema Bearer. Exemplo: "Authorization: Bearer {token}"'
+      name: Authorization
+      in: header
+security:
+  - Bearer: [ ]
