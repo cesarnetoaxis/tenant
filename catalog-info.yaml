@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: tenancy-service
+  description: API responsável pela gestão de tenants.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: equipe-tenant
+  definition:
+    $text: https://raw.githubusercontent.com/cesarnetoaxis/tenant/main/tenant.yaml
