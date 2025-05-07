@@ -6,6 +6,7 @@ metadata:
   annotations:
     github.com/project-slug: cesarnetoaxis/tenant
     roadie-backstage-pull-requests/default-filter: is:open is:pr
+    sonarqube.org/project-key: YOUR_INSTANCE_NAME/YOUR_PROJECT_KEY
 spec:
   type: openapi
   lifecycle: production
