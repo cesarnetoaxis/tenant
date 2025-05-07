@@ -1,15 +1,15 @@
 apiVersion: backstage.io/v1alpha1
-kind: API
+kind: Component
 metadata:
-  name: tenancy-service
-  description: API responsável pela gestão de tenants.
+  name: access-management
+  description: Módulo de gerenciamento de acesso da plataforma Ger7
   annotations:
+    backstage.io/source-location: url:https://github.com/Axis-Mobfintech/Ger7.Gtw7.Portal.AccessManagement/tree/develop
+    sonarqube.org/project-key: ger7-access-management
     github.com/project-slug: cesarnetoaxis/tenant
     roadie-backstage-pull-requests/default-filter: is:open is:pr
-    sonarqube.org/project-key: YOUR_INSTANCE_NAME/YOUR_PROJECT_KEY
 spec:
-  type: openapi
+  type: service
   lifecycle: production
-  owner: equipe-tenant
-  definition:
-    $text: https://raw.githubusercontent.com/cesarnetoaxis/tenant/main/tenant.yaml
+  owner: axis-mobfintech
+
