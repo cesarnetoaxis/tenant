@@ -3,6 +3,8 @@ kind: API
 metadata:
   name: tenancy-service
   description: API responsável pela gestão de tenants.
+  annotations:
+    github.com/project-slug: cesarneto/tenant
 spec:
   type: openapi
   lifecycle: production
