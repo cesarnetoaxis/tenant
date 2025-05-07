@@ -4,7 +4,8 @@ metadata:
   name: tenancy-service
   description: API responsável pela gestão de tenants.
   annotations:
-    github.com/project-slug: cesarneto/tenant
+    github.com/project-slug: cesarnetoaxis/tenant
+    roadie-backstage-pull-requests/default-filter: is:open is:pr
 spec:
   type: openapi
   lifecycle: production
