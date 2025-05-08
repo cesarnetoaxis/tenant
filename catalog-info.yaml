@@ -11,5 +11,5 @@ spec:
   lifecycle: production
   owner: cesarnetoaxis
    definition:
-    $text:
+    $text: https://raw.githubusercontent.com/cesarnetoaxis/tenant/refs/heads/main/tenant.yaml
 
