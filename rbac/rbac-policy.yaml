@@ -1,4 +1,3 @@
-
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
@@ -9,3 +8,17 @@ spec:
   profile:
     displayName: string
     email: string@gmail.com
+
+---
+
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: cesarrneto
+  description: "usuário Cesar A R Neto, gerado automaticamente via Identity Service"
+spec:
+  memberOf: [group:default/admin]
+  profile:
+    displayName: Cesar A R Neto
+    email: cnjvdg@gmail.com
