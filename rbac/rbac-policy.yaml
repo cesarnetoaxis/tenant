@@ -1,0 +1,11 @@
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: string
+  description: "usuário string, gerado automaticamente via Identity Service"
+spec:
+  memberOf: [group:default/string]
+  profile:
+    displayName: string
+    email: string@gmail.com
