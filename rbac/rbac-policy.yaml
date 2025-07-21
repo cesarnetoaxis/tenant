@@ -11,7 +11,11 @@ spec:
 
 
 
+
+
 ---
+
+
 
 
 
@@ -28,12 +32,29 @@ spec:
     email: cnjvdg@gmail.com
 
 
+
+
 ---
+
+
 
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: cesarneto
+  description: "Usuário: Cesar Neto, gerado automaticamente via Identity Service"
+spec:
+  memberOf: [group:default/dev]
+  profile:
+    displayName: Cesar Neto
+    email: cesarrneto@hotmail.com
+
+---
+
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: neto
   description: "Usuário: Cesar Neto, gerado automaticamente via Identity Service"
 spec:
   memberOf: [group:default/dev]
