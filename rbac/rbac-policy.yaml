@@ -8,3 +8,14 @@ spec:
   profile:
     displayName: string
     email: string@gmail.com
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: string2
+  description: "Usuário: string, gerado automaticamente via Identity Service"
+spec:
+  memberOf: [group:default/string]
+  profile:
+    displayName: string
+    email: string@gmail.com
