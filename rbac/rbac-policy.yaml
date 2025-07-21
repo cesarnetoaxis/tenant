@@ -1,1 +1,10 @@
-
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: teste
+  description: "Usuário: teste, gerado automaticamente via Identity Service"
+spec:
+  memberOf: [group:default/teste]
+  profile:
+    displayName: teste
+    email: teste@teste.teste
